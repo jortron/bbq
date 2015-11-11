@@ -1,18 +1,16 @@
 <% include ../partials/header %>
 
 <form name="new_user_form" id="new_user_form" method="post" action="/users">
-		<table class="tftable" border="1">
-			<tr><td><b>Date: (mm/dd/yyyy)</b></td><td><input type="text" name="date" id="date"></td>
-
+		
 		<table class="tftable" border="1" name="notes">
 			<tr><th>Notes (meat source, expiration date, price, weight, fresh/frozen, injection, brine, rub, mop)</th></tr>
 			</table>
-			<textarea name="notes" rows="1" cols="100" class="tftable" id="notes"></textarea>
+			<textarea name="notes" rows="2" cols="100" class="tftable" id="notes"></textarea>
 
 			<table class="tftable" border="1">
 			<tr><th>Time</th><th>Cooker Target Temp</th><th>Cooker Actual Temp</th><th>Meat Temp</th><th>Ambient Temp, Weather</th><th>Action taken: Vents, wood, fuel, water, mop, turn, etc.</th></tr>
-			<tr><td><input type="text" name="row1_time" id="row1_time"></td><td><input type="text" name="row1_targetTemp" id="row1_targetTemp"></td><td><input type="text" name="row1_actualTemp" id="row1_actualTemp"></td><td><input type="text" name="row1_meatTemp" id="row1_meatTemp"></td><td><input type="text" name="row1_ambientTemp" id="row1_ambientTemp"></td><td><input type="text" name="row1_actions" size="40"></td></tr>
-			<tr><td><input type="text" name="row2_time" id="row2_time"></td><td><input type="text" name="row2_targetTemp" id="row2_targetTemp"></td><td><input type="text" name="row2_actualTemp" id="row2_actualTemp"></td><td><input type="text" name="row2_meatTemp" id="row2_meatTemp"></td><td><input type="text" name="row2_ambientTemp" id="row2_ambientTemp"></td><td><input type="text" name="row2_actions" size="40"></td></tr>
+			<tr><td><input type="text" name="time" id="time"></td><td><input type="text" name="targetTemp" id="targetTemp"></td><td><input type="text" name="actualTemp" id="actualTemp"></td><td><input type="text" name="meatTemp" id="meatTemp"></td><td><input type="text" name="ambientTemp" id="ambientTemp"></td><td><input type="text" name="actions" size="40"></td></tr>
+			<!-- <tr><td><input type="text" name="row2_time" id="row2_time"></td><td><input type="text" name="row2_targetTemp" id="row2_targetTemp"></td><td><input type="text" name="row2_actualTemp" id="row2_actualTemp"></td><td><input type="text" name="row2_meatTemp" id="row2_meatTemp"></td><td><input type="text" name="row2_ambientTemp" id="row2_ambientTemp"></td><td><input type="text" name="row2_actions" size="40"></td></tr>
 			<tr><td><input type="text" name="row3_time" id="row3_time"></td><td><input type="text" name="row3_targetTemp" id="row3_targetTemp"></td><td><input type="text" name="row3_actualTemp" id="row3_actualTemp"></td><td><input type="text" name="row3_meatTemp" id="row3_meatTemp"></td><td><input type="text" name="row3_ambientTemp" id="row3_ambientTemp"></td><td><input type="text" name="row3_actions" size="40"></td></tr>
 			<tr><td><input type="text" name="row4_time" id="row4_time"></td><td><input type="text" name="row4_targetTemp" id="row4_targetTemp"></td><td><input type="text" name="row4_actualTemp" id="row4_actualTemp"></td><td><input type="text" name="row4_meatTemp" id="row4_meatTemp"></td><td><input type="text" name="row4_ambientTemp" id="row4_ambientTemp"></td><td><input type="text" name="row4_actions" size="40"></td></tr>
 			<tr><td><input type="text" name="row5_time" id="row5_time"></td><td><input type="text" name="row5_targetTemp" id="row5_targetTemp"></td><td><input type="text" name="row5_actualTemp" id="row5_actualTemp"></td><td><input type="text" name="row5_meatTemp" id="row5_meatTemp"></td><td><input type="text" name="row5_ambientTemp" id="row5_ambientTemp"></td><td><input type="text" name="row5_actions" size="40"></td></tr>
@@ -25,7 +23,7 @@
 			<tr><td><input type="text" name="row12_time" id="row12_time"></td><td><input type="text" name="row12_targetTemp" id="row12_targetTemp"></td><td><input type="text" name="row12_actualTemp" id="row12_actualTemp"></td><td><input type="text" name="row12_meatTemp" id="row12_meatTemp"></td><td><input type="text" name="row12_ambientTemp" id="row12_ambientTemp"></td><td><input type="text" name="row12_actions" size="40"></td></tr>
 			<tr><td><input type="text" name="row13_time" id="row13_time"></td><td><input type="text" name="row13_targetTemp" id="row13_targetTemp"></td><td><input type="text" name="row13_actualTemp" id="row13_actualTemp"></td><td><input type="text" name="row13_meatTemp" id="row13_meatTemp"></td><td><input type="text" name="row13_ambientTemp" id="row13_ambientTemp"></td><td><input type="text" name="row13_actions" size="40"></td></tr>
 			<tr><td><input type="text" name="row14_time" id="row14_time"></td><td><input type="text" name="row14_targetTemp" id="row14_targetTemp"></td><td><input type="text" name="row14_actualTemp" id="row14_actualTemp"></td><td><input type="text" name="row14_meatTemp" id="row14_meatTemp"></td><td><input type="text" name="row14_ambientTemp" id="row14_ambientTemp"></td><td><input type="text" name="row14_actions" size="40"></td></tr>
-			<tr><td><input type="text" name="row15_time" id="row15_time"></td><td><input type="text" name="row15_targetTemp" id="row15_targetTemp"></td><td><input type="text" name="row15_actualTemp" id="row15_actualTemp"></td><td><input type="text" name="row15_meatTemp" id="row15_meatTemp"></td><td><input type="text" name="row15_ambientTemp" id="row15_ambientTemp"></td><td><input type="text" name="row15_actions" size="40"></td></tr>
+			<tr><td><input type="text" name="row15_time" id="row15_time"></td><td><input type="text" name="row15_targetTemp" id="row15_targetTemp"></td><td><input type="text" name="row15_actualTemp" id="row15_actualTemp"></td><td><input type="text" name="row15_meatTemp" id="row15_meatTemp"></td><td><input type="text" name="row15_ambientTemp" id="row15_ambientTemp"></td><td><input type="text" name="row15_actions" size="40"></td></tr> -->
 		</table>
 
 		<table class="tftable" border="1" name="finishing_serving">

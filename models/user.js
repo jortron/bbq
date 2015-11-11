@@ -7,25 +7,27 @@ var userSchema = new mongoose.Schema({
 
 var User = mongoose.model('User', userSchema);
 
-var cooksSchema = new mongoose.Schema({
-  cookName: String,
-  finishedNotes: String,
-  improvements: String,
-  rank: Number,
-});
 
-var Cooks = mongoose.model('Cooks', cooksSchema);
+  var cooksSchema = new mongoose.Schema({
+    cookName: String,
+    finishedNotes: String,
+    improvements: String,
+    rank: Number,
+  });
 
-// Make this available to our other files
-module.exports = Cooks;
+  var Cooks = mongoose.model('Cooks', cooksSchema);
 
-var timesSchema = new mongoose.Schema({
-  time: Date,
-  targetTemp: Number,
-  actualTemp: Number,
-  meatTemp: Number,
-  ambientTemp: Number,
-  notes: String,
-});
+  // Make this available to our other files
+  module.exports = Cooks;
 
-var Times = mongoose.model('Times', timesSchema);
+  var timesSchema = new mongoose.Schema({
+    time: Date,
+    targetTemp: Number,
+    actualTemp: Number,
+    meatTemp: Number,
+    ambientTemp: Number,
+    notes: String,
+  });
+
+  var Times = mongoose.model('Times', timesSchema);
+  
