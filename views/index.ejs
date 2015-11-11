@@ -6,13 +6,16 @@
   </head>
   <body>
     <center>
-    	<div class="div_text_shadow">
-			The BBQ Log
-		</div>
+    	
+        <div class="div_text_shadow">
+  			  The BBQ Log
+  		  </div>
+       
     	<h1>Keep track of your barbecue cooks, all in one place!</h1>
     	<h2>Name your cook:</h2>
-      <p><input type="text" value="Name" id="cookName"></p>
-      <form action="/users/new">
+      
+      <form action="/cooks" method="post">
+        <p><input type="text" size="25" name="cookname"></p>
     		<input type="submit" value="Create a new log" class="btn">
 		</form>
     </center>		

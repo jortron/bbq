@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var cooks = require('./routes/cooks');
+
+
 
 var app = express();
 
@@ -36,6 +39,7 @@ mongoose.connect(process.env.MONGO_DB_CONN_BBQ);
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/cooks', cooks);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
