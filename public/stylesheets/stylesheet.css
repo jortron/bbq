@@ -30,7 +30,7 @@ a {
   border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
@@ -86,3 +86,11 @@ footer {
 .tftable tr:hover {
 	background-color:#ffffff;
 }
+/*
+textarea {
+  text-align: center;
+  }*/
+
+input {
+  text-align: center;
+} 
