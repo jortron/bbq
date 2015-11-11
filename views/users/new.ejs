@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 
-<form action="data.php" method="post">
+<form name="new_user_form" id="new_user_form" method="post" action="/users">
 		<table class="tftable" border="1">
 			<tr><td><b>Date: (mm/dd/yyyy)</b></td><td><input type="text" name="date" id="date"></td>
 
@@ -43,7 +43,7 @@
 		</table>
 		<textarea name="next_time" rows="2" cols="100" class="tftable" id="next_time"></textarea>
 		
-		<input type="submit" name="formSubmit" value="Submit">
+		<input type="submit" name="formSubmit" value="Save">
 	</form>
 
 <% include ../partials/footer %>

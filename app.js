@@ -22,6 +22,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Mongoose
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Mongoose connection
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_DB_CONN_BBQ);
+
+
 app.use('/', routes);
 app.use('/users', users);
 
