@@ -4,7 +4,7 @@ var cookSchema = new mongoose.Schema({
   cookName: String,
   finishedNotes: String,
   improvements: String,
-  rank: Number,
+  rank: Number
 });
 
 var Cook = mongoose.model('Cook', cookSchema);
