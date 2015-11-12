@@ -3,7 +3,7 @@ var router = express.Router();
 var Cook = require('../models/cook');
 
 router.post('/', function(req, res, next) {
-  console.log("this works")
+  
   Cook.create({ cookName: req.body.cookname }, function (err, data) {
 	  if (err) console.log(err);
 	  // saved!

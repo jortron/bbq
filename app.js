@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var cooks = require('./routes/cooks');
+var time = require('./routes/time');
 
 
 
@@ -18,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -40,6 +41,7 @@ mongoose.connect(process.env.MONGO_DB_CONN_BBQ);
 app.use('/', routes);
 app.use('/users', users);
 app.use('/cooks', cooks);
+app.use('/time', time);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
